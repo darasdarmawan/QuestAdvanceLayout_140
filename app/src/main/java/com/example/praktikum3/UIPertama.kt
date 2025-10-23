@@ -1,6 +1,7 @@
 package com.example.praktikum3
 
-
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
@@ -25,7 +26,7 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             stringResource(R.string.univ),
             fontSize = 22.sp
         )
-
+        Spacer(modifier = Modifier.height(25.dp))
 
     }
 }
