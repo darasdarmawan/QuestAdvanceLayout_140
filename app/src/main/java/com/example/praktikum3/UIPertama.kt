@@ -41,50 +41,52 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
             )
+        ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(10.dp)
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.padding(10.dp)
-                ) {
-                    val gambar = painterResource(R.drawable.images)
-                    Image(
-                        painter = gambar,
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(100.dp)
-                            .padding(5.dp)
+                val gambar = painterResource(R.drawable.images)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
                     )
-                    Spacer(modifier = Modifier.width(30.dp))
-                    Column {
-                        Text(
-                            stringResource(R.string.nama),
-                            fontSize = 30.sp,
-                            fontFamily = FontFamily.Cursive,
-                            color = Color.White,
-                            modifier = Modifier.padding(top = 15.dp)
-                        )
-                        Text(
-                            stringResource(R.string.alamat),
-                            fontSize = 20.sp,
-                            color = Color.Yellow,
-                            modifier = Modifier.padding(top = 10.dp)
-                        )
+                    Text(
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
 
 
-                    }
                 }
             }
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-            ){
-                Text(
-                    stringResource(R.string.copy),
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(bottom = 50.dp)
-                )
+        }
 
-            }
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        )  {
+            Text(
+                stringResource(R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
+
+        }
     }
 }
